@@ -1,0 +1,378 @@
+@import url('./common.css');
+
+
+header {
+
+    display: flex;
+    background: linear-gradient(90deg, var(--secondary), var(--primary));
+    box-shadow: var(--shadow-color);
+    padding: 0 1rem;
+    margin-bottom: 3rem;    
+}
+
+
+/* BOTÃO DARK MODE */
+
+input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  .label-dark  {
+    width: 3rem;
+    height: 2rem;
+    display:block;
+    background-color: rgba(59, 58, 58, 0.596);
+    border-radius: 1rem;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 2rem #477a8550;
+    cursor: pointer;
+  }
+  .label-dark::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: white;
+    position: absolute;
+    border-radius: 1rem;
+    top: 0.5rem;
+    left: 0.5rem;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:checked + .label-dark:after {
+    left: calc(100% - 1rem);
+    transform: translateX(-20%);
+  }
+  
+  input[type="checkbox"]:checked + .label-dark  {
+    background-color: var(--secondary);
+  }
+  
+  .label-dark :active:after {
+    width: 1.5rem;
+  }
+  
+a {
+    display: block;
+    width: fit-content;
+    padding: .7rem 1rem;
+    border-bottom: .2rem solid white;
+    text-decoration: none;
+    color: var(--logo-color);
+}
+
+input[type="date"]{
+    background-color: var(--bg-tarefas);
+    color: var(--label-color);
+    padding: 5px;
+    font-family: 'Lato', sans-serif;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #8e64c55d;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    color: rgb(223, 223, 223);
+}
+
+.user-info p {
+    text-transform: capitalize;
+    color: var(--bg-color);
+}
+
+.user-info .user-image {
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--bg-color);
+}
+.user-image{
+    margin-right: .7rem;
+    object-fit: cover;
+    z-index: 2;
+    border-radius: 50%;
+    border: 1.5px solid var(--logo-color);
+    margin-left: .7rem;
+}
+
+#titulo-prazo {
+    color: grey;
+    margin: 1rem;
+}
+
+
+/* Novas tarefa ----------------------------------------------------------- */
+
+.nova-tarefa {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-tarefas);
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    box-shadow: 2px 2px 10px var(--shadow-color);
+    border-radius: .2rem;
+    z-index: 20;
+}
+
+
+
+.nova-tarefa input[type=text] {
+    border: none;
+    flex: 1;
+    border-bottom: 1px solid var(--shadow-color);
+    border-radius: 0;
+    padding: .4rem;
+    font-size: 1.1rem;
+    background-color: var(--bg-tarefas);
+    color: var(--label-color);
+}
+
+.nova-tarefa input:focus {
+    outline: none;
+    border-bottom: 1px solid grey;
+}
+
+.nova-tarefa input::placeholder {
+    color: rgb(197, 197, 197);
+    text-indent: .2rem;
+}
+
+.nova-tarefa button {
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--botao-color);
+    margin-left: 1rem;
+    opacity: .5;
+    border-radius: 50%;
+}
+
+.nova-tarefa button:hover {
+    opacity: 1;
+}
+
+.nova-tarefa button img {
+    height: 100%;
+    cursor: pointer;
+    
+}
+
+/* circunferencia não concluidas */
+.not-done {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--app-grey);
+    margin-right: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#validar{
+    position: absolute;
+    color: var(--secondary);
+    font-size: .75rem;
+    bottom: 5px;
+    left: 5rem;
+}
+
+/* Lista de tarefas --------------------------------------------------------- */
+
+.tarefas-pendentes {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    list-style: none;
+    margin: 2em auto;
+    background-color: var(--bg-color);
+}
+
+.tarefa {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    background-color: (--bg)
+}
+
+.tarefa .not-done {
+    position: relative;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: (--bg-color);
+    box-shadow: 2px 2px 5px var(--shadow-color);
+    border: 2px solid var(--secondary);
+    z-index: 2;
+    transition: background-color 200ms linear;
+}
+
+.tarefa .not-done:hover {
+    background-color: var(--secondary);
+}
+
+.tarefa:first-child .not-done::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: calc(.75rem - 1px);
+    display: block;
+    height: 3rem;
+    width: 2px;
+    background-color: var(--secondary);
+}
+
+.tarefa:not(:last-child) .not-done::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: calc(.75rem - 1px);
+    display: block;
+    height: 4.5rem;
+    width: 2px;
+    background-color: var(--secondary);
+}
+
+.tarefa .descripcion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    background-color: var(--bg-tarefas);
+    padding: 1rem 2rem;
+    box-shadow: 2px 2px 5px var(--shadow-color);
+    
+}
+
+.tarefa .descripcion div{
+    min-width: 70px;
+}
+
+.tarefa .nome {
+    color: var(--tarefa-color);  
+}
+
+.tarefa .timestamp {
+    font-size: .9rem;
+    color: rgb(134, 134, 134);
+    
+}
+
+
+/* cor da data */
+p{
+    color: grey
+}
+
+
+/* Tarefas concluídas ----------------------------------------------------------- */
+
+.titulo-concluida {
+    position: relative;
+    width: 8rem;
+    text-align: center;
+    padding: .5rem 1rem;
+    background-color:var(--bg-color);
+    border-radius: .2rem;
+    box-shadow: 3px 3px 5px var(--shadow-color);
+    color: rgb(170, 170, 170);
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-left: calc(15% - 4rem);
+    z-index: 20;
+}
+
+.titulo-concluida,
+.tarefas-concluidas {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    list-style: none;
+    margin: 2rem auto;
+}
+
+/* circulo concluidas */
+.tarefas-concluidas .not-done {
+    background-color: var(--app-grey);
+    border-color: grey;
+}
+
+.tarefas-concluidas .not-done::before,
+.tarefas-concluidas .not-done::after {
+    background-color: grey !important;
+}
+
+.tarefas-concluidas .tarefa .descripcion {
+    background-color: (--bg-tarefas);
+}
+
+.tarefas-concluidas .tarefa .descripcion .nome {
+    color: var(--tarefa-color);
+    text-decoration: line-through;
+}
+
+.tarefa .excluir {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--secondary) ;
+    color: var(--excluir-color);
+    border-radius: 50%;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    display: flex;
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+
+.tarefa:hover .excluir{
+    opacity: 1;
+    display: flex;
+}
+
+/* Barra de progesso ----------------------------------------------------------- */
+
+.loading-mask{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background:linear-gradient(90deg, var(--primary), var(--secondary));
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 100;
+}
+
+.loading {
+    position: absolute;
+    width:120px;
+    height:22px;
+    border-radius: 20px;
+    color: white;
+    border:2px solid;
+}
+.loading::before {
+    content:"";
+    position: absolute;
+    margin:2px;
+    inset:0 100% 0 0;
+    border-radius: inherit;
+    background:currentColor;
+    animation:l1 1.5s infinite;
+}
+
+@keyframes l1 {
+      100% {inset:0}
+}

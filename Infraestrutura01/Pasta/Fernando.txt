@@ -1,0 +1,29 @@
+
+#!/bin/bash
+####################################
+#
+# Script do Backup - Grupo ??? Não lembro!!!
+#
+####################################
+
+# Quais os arquivos. 
+backup_files="/home/fer96carvalho/Música/*"
+
+# Onde vai ser salvo.
+dest="/home/fer96carvalho/Documentos/backup"
+
+# Criando o nome do arquivo.;
+data=$(date +%b-%d-%y )
+nome=$(hostname -s)
+archive_file="$nome-$data.tar.gz"
+
+
+# Imprimindo a ação.
+echo "Backing up $backup_files to $dest/$archive_file";
+
+# Backup dos arquivos usiando tar.
+tar -cpzf $dest/$archive_file $backup_files
+
+# Mensagem de conclusão.
+echo "Backup finished"
+date

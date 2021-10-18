@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/calendario.svg">
+  <link rel="stylesheet" href="./styles/login.css">
+  <title>ToDo</title>
+</head>
+
+<body>
+
+  <div class="btn-dark">
+    <input type="checkbox" name="switch" id="switch">
+    <label class="label-dark" for="switch"></label>
+  </div>
+
+
+  <form>
+    <h1>Cadastro de conta</h1>
+
+    <div class="image"><img class="imagemPrevia"></div></div>
+    
+    
+    <label for="username" class="nomeTexto">Nome:</label>
+    <input type="text" class="nomeInput" maxlength="15">
+
+
+    <label for="password" class="senhaTexto">Senha:</label>
+    <input type="password" class="senhaInput" maxlength="15">
+
+
+    <label for="password-2" class="senhaTexto2">Repetir senha:</label>
+    <input type="password" class="senhaInput2" maxlength="15">
+
+
+    <label for="email" class="emailTexto">E-mail:</label>
+    <input type="email" class="emailInput" maxlength="30">
+
+
+    <label for="imagem" class="imagemTexto">Imagem:</label>
+    <input type="button" class="imagemBotao" value="Clique para escolher uma imagem sua.">
+    <input type="file" class="imagemInput" hidden>
+
+    <button type="click" id="bntCriar">Criar Conta</button>
+
+    <div class="form-footer">
+      
+      <p>ToDo</p>
+    </div>
+  </form>
+
+  <script src="./js/appIndex.js"></script>
+  <script src="./js/appstyles.js"></script>
+</body>
+
+</html>

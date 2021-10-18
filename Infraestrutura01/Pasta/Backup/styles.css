@@ -1,0 +1,7 @@
+.r {
+    color: blue;
+    font-size: 50px;
+}
+.r:hover{
+    color: red;
+}

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20210923 19:10:29.982" rpa="false" schemaversion="2">
+<suite id="s1" name="Test2" source="D:\Digital-House\2b\teste\projetoRobot2\test2.robot">
+<test id="s1-t1" name="Sauce demo">
+<kw name="Acessar o site do Sauce">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210923 19:10:30.224" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" starttime="20210923 19:10:30.224" endtime="20210923 19:10:32.073"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:30.224" endtime="20210923 19:10:32.073"/>
+</kw>
+<kw name="Fazer login no site com o usuário &quot;standard_user&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=#user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:32.075" level="INFO">Typing text 'standard_user' into text field 'css=#user-name'.</msg>
+<status status="PASS" starttime="20210923 19:10:32.074" endtime="20210923 19:10:32.218"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=#password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:32.219" level="INFO">Typing text 'secret_sauce' into text field 'css=#password'.</msg>
+<status status="PASS" starttime="20210923 19:10:32.219" endtime="20210923 19:10:32.363"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:32.364" level="INFO">Clicking element 'css=#login-button'.</msg>
+<status status="PASS" starttime="20210923 19:10:32.363" endtime="20210923 19:10:32.464"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:32.074" endtime="20210923 19:10:32.465"/>
+</kw>
+<kw name="Acessar os detalhes do produto &quot;Sauce Labs Backpack&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#item_4_title_link &gt; div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:32.466" level="INFO">Clicking element 'css=#item_4_title_link &gt; div'.</msg>
+<status status="PASS" starttime="20210923 19:10:32.465" endtime="20210923 19:10:32.537"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:32.465" endtime="20210923 19:10:32.538"/>
+</kw>
+<kw name="Adicionar o produto &quot;Sauce Labs Backpack&quot; ao carrinho de compras">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#add-to-cart-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:32.539" level="INFO">Clicking element 'css=#add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20210923 19:10:32.539" endtime="20210923 19:10:32.594"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:32.538" endtime="20210923 19:10:32.594"/>
+</kw>
+<kw name="Abrir o carrinho de compras">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#shopping_cart_container &gt; a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:32.595" level="INFO">Clicking element 'css=#shopping_cart_container &gt; a'.</msg>
+<status status="PASS" starttime="20210923 19:10:32.595" endtime="20210923 19:10:32.649"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:32.595" endtime="20210923 19:10:32.649"/>
+</kw>
+<kw name="Remover o produto &quot;Sauce Labs Backpack&quot; do carrinho de compras">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#remove-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:32.650" level="INFO">Clicking element 'css=#remove-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20210923 19:10:32.650" endtime="20210923 19:10:32.704"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:32.650" endtime="20210923 19:10:32.704"/>
+</kw>
+<kw name="Clicar em &quot;Continue Shopping&quot; para voltar à Página Inicial">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#continue-shopping</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:32.706" level="INFO">Clicking element 'css=#continue-shopping'.</msg>
+<status status="PASS" starttime="20210923 19:10:32.705" endtime="20210923 19:10:32.768"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:32.705" endtime="20210923 19:10:32.768"/>
+</kw>
+<kw name="Adicionar o produto &quot;Sauce Labs Fleece Jacket&quot; ao carrinho de compras">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#add-to-cart-sauce-labs-fleece-jacket</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:32.770" level="INFO">Clicking element 'css=#add-to-cart-sauce-labs-fleece-jacket'.</msg>
+<status status="PASS" starttime="20210923 19:10:32.770" endtime="20210923 19:10:32.845"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:32.769" endtime="20210923 19:10:32.846"/>
+</kw>
+<kw name="Abrir o carrinho de compras">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#shopping_cart_container &gt; a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:32.847" level="INFO">Clicking element 'css=#shopping_cart_container &gt; a'.</msg>
+<status status="PASS" starttime="20210923 19:10:32.847" endtime="20210923 19:10:32.896"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:32.846" endtime="20210923 19:10:32.897"/>
+</kw>
+<kw name="Clicar em &quot;Checkout&quot; para finalizar a compra">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#checkout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:32.899" level="INFO">Clicking element 'css=#checkout'.</msg>
+<status status="PASS" starttime="20210923 19:10:32.898" endtime="20210923 19:10:32.944"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:32.898" endtime="20210923 19:10:32.944"/>
+</kw>
+<kw name="Preencher os dados: PRIMEIRO NOME (FIRST NAME), SOBRENOME (LAST NAME) E CEP (POSTAL CODE)">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=#first-name</arg>
+<arg>Silvano</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:32.946" level="INFO">Typing text 'Silvano' into text field 'css=#first-name'.</msg>
+<status status="PASS" starttime="20210923 19:10:32.945" endtime="20210923 19:10:33.042"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=#last-name</arg>
+<arg>Araujo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:33.042" level="INFO">Typing text 'Araujo' into text field 'css=#last-name'.</msg>
+<status status="PASS" starttime="20210923 19:10:33.042" endtime="20210923 19:10:33.141"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=#postal-code</arg>
+<arg>96270000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:33.142" level="INFO">Typing text '96270000' into text field 'css=#postal-code'.</msg>
+<status status="PASS" starttime="20210923 19:10:33.142" endtime="20210923 19:10:33.251"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:32.944" endtime="20210923 19:10:33.251"/>
+</kw>
+<kw name="Clicar no botão &quot;CONTINUE&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#continue</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:33.253" level="INFO">Clicking element 'css=#continue'.</msg>
+<status status="PASS" starttime="20210923 19:10:33.252" endtime="20210923 19:10:33.314"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:33.252" endtime="20210923 19:10:33.314"/>
+</kw>
+<kw name="Validar se o valor total cobrado é de &quot;$53.99&quot;">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>css=#checkout_summary_container &gt; div &gt; div.summary_info &gt; div.summary_total_label</arg>
+<arg>$53.99</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210923 19:10:33.339" level="INFO">Element 'css=#checkout_summary_container &gt; div &gt; div.summary_info &gt; div.summary_total_label' contains text '$53.99'.</msg>
+<status status="PASS" starttime="20210923 19:10:33.315" endtime="20210923 19:10:33.340"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:33.315" endtime="20210923 19:10:33.340"/>
+</kw>
+<kw name="Clicar no botão &quot;FINISH&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#finish</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210923 19:10:33.341" level="INFO">Clicking element 'css=#finish'.</msg>
+<status status="PASS" starttime="20210923 19:10:33.340" endtime="20210923 19:10:33.389"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:33.340" endtime="20210923 19:10:33.389"/>
+</kw>
+<kw name="Validar que a compra foi realizada e a mensagem &quot;THANK YOU FOR YOUR ORDER&quot; está sendo exibida">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>css=#checkout_complete_container &gt; h2</arg>
+<arg>THANK YOU FOR YOUR ORDER</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210923 19:10:33.417" level="INFO">Element 'css=#checkout_complete_container &gt; h2' contains text 'THANK YOU FOR YOUR ORDER'.</msg>
+<status status="PASS" starttime="20210923 19:10:33.390" endtime="20210923 19:10:33.417"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210923 19:10:33.417" endtime="20210923 19:10:35.612"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:33.390" endtime="20210923 19:10:35.613"/>
+</kw>
+<status status="PASS" starttime="20210923 19:10:30.223" endtime="20210923 19:10:35.614"/>
+</test>
+<status status="PASS" starttime="20210923 19:10:29.984" endtime="20210923 19:10:35.616"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test2">Test2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

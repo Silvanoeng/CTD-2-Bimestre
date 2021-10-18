@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/calendario.svg">
+    <link rel="stylesheet" href="./styles/lista-tarefas.css">
+    <script src="https://kit.fontawesome.com/0dd8173ea9.js" crossorigin="anonymous"></script>
+    <title>ToDo</title>
+</head>
+
+<body>
+    <div class="loading-mask">
+        <div class="loading"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="#">My ToDo's</a>
+        </nav>
+
+        <div class="user-info">
+            <p id="nome-usuario">username</p>
+            <img class="user-image">
+            <input type="checkbox" name="switch" id="switch">
+            <label class="label-dark" for="switch"></label>
+
+        </div>
+
+    </header>
+
+    <form class="nova-tarefa">
+        <div class="not-done "></div>
+        <input type="text" placeholder="Nova tarefa" id="nova-tarefa">
+        <div id="validar"></div>
+        <label for="prazo" id="titulo-prazo">Prazo:</label>
+        <input id="prazo" type="date">
+        <button id="adicionar-tarefa">
+            <img src="./assets/plus.png" alt="Adicionar Tarefa">
+        </button>
+    </form>
+
+
+    <ul class="tarefas-pendentes">
+        <li class="tarefa">
+            <div class="not-done"></div>
+            <div class="descripcion">
+                <p class="nome">Minha bela tarefa</p>
+                <div>
+                    <p class="timestamp">Criada: 19-abr-21</p>
+                    <p class="timestamp">Prazo: 27-set-21</p>
+                </div>
+            </div>
+            <div class="excluir"><i class="fas fa-trash icon"></i></div>     
+    </ul>
+
+    <h2 class="titulo-concluida">Tarefas concluídas</h2>
+    <ul class="tarefas-concluidas">
+        <li class="tarefa">
+            <div class="not-done"></div>
+            <div class="descripcion">
+                <p class="nome">Minha bela tarefa</p>
+                <div>
+                    <p class="timestamp">Criada: 19-abr-21</p>
+                    <p class="timestamp">Prazo: 27-set-21</p>
+                </div>
+            </div>
+            <div class="excluir"><i class="fas fa-trash icon"></i></div>
+        </li>
+    </ul>
+    <script src="./js/appstyles.js"></script>
+    <script src="./js/appTarefas.js"></script>
+</body>
+
+</html>

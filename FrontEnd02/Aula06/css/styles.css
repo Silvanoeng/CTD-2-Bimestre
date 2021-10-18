@@ -1,0 +1,95 @@
+body{
+    font-family: 'Allerta Stencil', sans-serif;
+    color: rgb(41, 1, 1);
+    background-image: url("../img/floresta1.webp");
+    background-size: 100%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+}
+
+.container {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+
+.box {
+    border-radius: 10px;
+    width:  800px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+.casa {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: none;
+    background-image: url("../img/casa.png");
+    background-size: 100%;
+    border: none;
+    position: fixed;
+    margin: 15px;
+}
+
+.carne {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: none;
+    background-image: url("../img/carne.png");
+    background-size: 100%;
+    border: none;
+}
+
+button:hover {
+    transition: all 1s;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.textoBotao {
+    margin-top: -10px;
+}
+.containerFelinos {
+    padding-top: 2%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+.felinos {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    width:  800px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+img {
+    width: 100%;
+}
+.textoFelinos{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.divId{
+    margin-bottom:  30px;
+}
+
+.linkFelino {
+    text-decoration: none;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    border-radius: 8px;
+    background-color: green;
+    color: white;
+}

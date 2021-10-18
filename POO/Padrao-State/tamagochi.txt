@@ -1,0 +1,156 @@
+package Aula20;
+
+public class Triste implements Estado{
+
+    private Tamagochi t;
+
+    public Triste(Tamagochi t){
+        this.t = t;
+    }
+    @Override
+    public void come() {
+
+        System.out.println("Beep Beep - vomitando");
+    }
+
+    @Override
+    public void bebe() {
+        System.out.println("Beep, Beep, Beep - pisca");
+    }
+
+    @Override
+    public void carinho() {
+        t.setEstado(new Feliz(t));
+    }
+}
+
+------------------------------------------------
+
+package Aula20;
+
+public class Tamagochi {
+    private Estado estado;
+
+    public Tamagochi(){
+        setEstado(new Fome(this));
+    }
+
+    public Estado getEstado() {
+
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+
+        this.estado = estado;
+    }
+
+    public void come(){
+        getEstado().come();
+    }
+
+    public void bebe(){
+        getEstado().bebe();
+    }
+
+    public void carinho(){
+        getEstado().carinho();
+    }
+}
+
+-------------------------------------
+
+package Aula20;
+
+public class Fome implements Estado{
+
+    private Tamagochi t;
+
+    public Fome(Tamagochi t){
+
+        this.t = t;
+    }
+
+    @Override
+    public void come() {
+        t.setEstado(new Feliz(t));
+    }
+
+    @Override
+    public void bebe() {
+        t.setEstado(new Feliz(t));
+    }
+
+    @Override
+    public void carinho() {
+        System.out.println("cut cut");
+    }
+}
+
+----------------------------------------
+
+package Aula20;
+
+public class Sede implements Estado {
+
+    private Tamagochi t;
+
+    public Sede(Tamagochi t){
+        this.t = t;
+    }
+
+    @Override
+    public void come() {
+        System.out.println("TÃ´ com sede");
+    }
+
+    @Override
+    public void bebe() {
+        System.out.println("Vlw fera");
+        t.setEstado(new Feliz(t));
+    }
+
+    @Override
+    public void carinho() {
+        System.out.println("Vlw fera 2");
+    }
+}
+
+---------------------------------------------
+
+package Aula20;
+
+public class Feliz implements Estado{
+
+    private Tamagochi t;
+
+    public Feliz(Tamagochi t){
+        this.t = t;
+    }
+
+    @Override
+    public void come() {
+        System.out.println("Come come");
+    }
+
+    @Override
+    public void bebe() {
+        System.out.println("Beep, Beep, Beep, Beep, Beep");
+    }
+
+    @Override
+    public void carinho() {
+        System.out.println("Cut cut");
+    }
+}
+
+--------------------------------------------------
+
+package Aula20;
+
+public interface Estado {
+
+    public void come();
+    public void bebe();
+    public void carinho();
+}

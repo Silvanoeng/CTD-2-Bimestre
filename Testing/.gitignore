@@ -1,0 +1,6 @@
+#todos os diretórios de nome node_modules
+**/node_modules
+#todos arquivos .exe
+*.exe
+#pasta selenium-ide
+selenium-ide/
